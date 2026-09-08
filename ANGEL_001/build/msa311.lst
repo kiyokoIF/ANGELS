@@ -1,0 +1,657 @@
+ARM GAS  /var/folders/41/s_9r3f9s4p3_9jgx7wszdkhh0000gn/T//ccqStrif.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.arch armv7e-m
+   3              		.fpu fpv5-d16
+   4              		.eabi_attribute 28, 1
+   5              		.eabi_attribute 20, 1
+   6              		.eabi_attribute 21, 1
+   7              		.eabi_attribute 23, 3
+   8              		.eabi_attribute 24, 1
+   9              		.eabi_attribute 25, 1
+  10              		.eabi_attribute 26, 1
+  11              		.eabi_attribute 30, 2
+  12              		.eabi_attribute 34, 1
+  13              		.eabi_attribute 18, 4
+  14              		.file	"msa311.cpp"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text._ZN6MSA3114InitEv,"ax",%progbits
+  19              		.align	1
+  20              		.p2align 2,,3
+  21              		.global	_ZN6MSA3114InitEv
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	_ZN6MSA3114InitEv:
+  27              	.LVL0:
+  28              	.LFB4694:
+  29              		.file 1 "periph/msa311.cpp"
+   1:periph/msa311.cpp **** #include "msa311.h"
+   2:periph/msa311.cpp **** 
+   3:periph/msa311.cpp **** bool MSA311::Init() {
+  30              		.loc 1 3 21 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 24
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+   4:periph/msa311.cpp ****     I2CHandle::Config i2c_conf;
+  34              		.loc 1 4 5 view .LVU1
+   3:periph/msa311.cpp **** 
+  35              		.loc 1 3 21 is_stmt 0 view .LVU2
+  36 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+  37              		.cfi_def_cfa_offset 24
+  38              		.cfi_offset 4, -24
+  39              		.cfi_offset 5, -20
+  40              		.cfi_offset 6, -16
+  41              		.cfi_offset 7, -12
+  42              		.cfi_offset 8, -8
+  43              		.cfi_offset 14, -4
+   5:periph/msa311.cpp **** 
+   6:periph/msa311.cpp **** 	i2c_conf.periph 		= I2CHandle::Config::Peripheral::I2C_1;
+   7:periph/msa311.cpp ****     i2c_conf.speed 			= I2CHandle::Config::Speed::I2C_100KHZ;
+   8:periph/msa311.cpp ****     i2c_conf.mode 			= I2CHandle::Config::Mode::I2C_MASTER;
+   9:periph/msa311.cpp ****     i2c_conf.pin_config.scl = seed::D11;
+  44              		.loc 1 9 29 view .LVU3
+  45 0004 294B     		ldr	r3, .L7
+   3:periph/msa311.cpp **** 
+  46              		.loc 1 3 21 view .LVU4
+  47 0006 88B0     		sub	sp, sp, #32
+ARM GAS  /var/folders/41/s_9r3f9s4p3_9jgx7wszdkhh0000gn/T//ccqStrif.s 			page 2
+
+
+  48              		.cfi_def_cfa_offset 56
+  49              	.LVL1:
+  50              	.LBB5:
+  51              	.LBI5:
+  52              		.file 2 "../libDaisy//src/per/i2c.h"
+   1:../libDaisy//src/per/i2c.h **** #pragma once
+   2:../libDaisy//src/per/i2c.h **** #include "daisy_core.h"
+   3:../libDaisy//src/per/i2c.h **** 
+   4:../libDaisy//src/per/i2c.h **** namespace daisy
+   5:../libDaisy//src/per/i2c.h **** {
+   6:../libDaisy//src/per/i2c.h **** /** A handle for interacting with an I2C peripheral. This is a dumb
+   7:../libDaisy//src/per/i2c.h ****  *  gateway that internally points to one of the four I2C peripherals
+   8:../libDaisy//src/per/i2c.h ****  *  after it was initialised. It can then be copied and passed around.
+   9:../libDaisy//src/per/i2c.h ****  *  Use an I2CHandle like this:
+  10:../libDaisy//src/per/i2c.h ****  *  
+  11:../libDaisy//src/per/i2c.h ****  *      // setup the configuration
+  12:../libDaisy//src/per/i2c.h ****  *      I2CHandle::Config i2c_conf;
+  13:../libDaisy//src/per/i2c.h ****  *      i2c_conf.periph = I2CHandle::Config::Peripheral::I2C_1;
+  14:../libDaisy//src/per/i2c.h ****  *      i2c_conf.speed  = I2CHandle::Config::Speed::I2C_400KHZ;
+  15:../libDaisy//src/per/i2c.h ****  *      i2c_conf.mode   = I2CHandle::Config::Mode::Master;
+  16:../libDaisy//src/per/i2c.h ****  *      i2c_conf.pin_config.scl  = {DSY_GPIOB, 8};
+  17:../libDaisy//src/per/i2c.h ****  *      i2c_conf.pin_config.sda  = {DSY_GPIOB, 9};
+  18:../libDaisy//src/per/i2c.h ****  *      // initialise the peripheral
+  19:../libDaisy//src/per/i2c.h ****  *      I2CHandle i2c;
+  20:../libDaisy//src/per/i2c.h ****  *      i2c.Init(i2c_conf);
+  21:../libDaisy//src/per/i2c.h ****  *      // now i2c points to the corresponding peripheral and can be used.
+  22:../libDaisy//src/per/i2c.h ****  *      i2c.TransmitBlocking( ... );
+  23:../libDaisy//src/per/i2c.h ****  */
+  24:../libDaisy//src/per/i2c.h **** class I2CHandle
+  25:../libDaisy//src/per/i2c.h **** {
+  26:../libDaisy//src/per/i2c.h ****   public:
+  27:../libDaisy//src/per/i2c.h ****     /** Contains settings for initialising an I2C interface. */
+  28:../libDaisy//src/per/i2c.h ****     struct Config
+  53              		.loc 2 28 12 is_stmt 1 view .LVU5
+  54              	.LBE5:
+   3:periph/msa311.cpp ****     I2CHandle::Config i2c_conf;
+  55              		.loc 1 3 21 is_stmt 0 view .LVU6
+  56 0008 0446     		mov	r4, r0
+  57              	.LBB8:
+  58              	.LBB6:
+  59              		.loc 2 28 12 view .LVU7
+  60 000a 1022     		movs	r2, #16
+  61              	.LBE6:
+  62              	.LBE8:
+  10:periph/msa311.cpp ****     i2c_conf.pin_config.sda = seed::D12;
+  11:periph/msa311.cpp **** 
+  12:periph/msa311.cpp ****     i2c.Init(i2c_conf);
+  13:periph/msa311.cpp **** 
+  14:periph/msa311.cpp ****     // Ensuring that it has the correct Part ID
+  15:periph/msa311.cpp ****     buf[0] = MSA311_REG_PARTID;
+  63              		.loc 1 15 12 view .LVU8
+  64 000c 0127     		movs	r7, #1
+   6:periph/msa311.cpp ****     i2c_conf.speed 			= I2CHandle::Config::Speed::I2C_100KHZ;
+  65              		.loc 1 6 20 view .LVU9
+  66 000e 0025     		movs	r5, #0
+  67              		.loc 1 15 12 view .LVU10
+  68 0010 2646     		mov	r6, r4
+ARM GAS  /var/folders/41/s_9r3f9s4p3_9jgx7wszdkhh0000gn/T//ccqStrif.s 			page 3
+
+
+  16:periph/msa311.cpp ****     i2c.TransmitBlocking(MSA311_I2CADDR_DEFAULT, buf, 1, 1000);
+  69              		.loc 1 16 25 view .LVU11
+  70 0012 4FF47A78 		mov	r8, #1000
+  71              	.LBB9:
+  72              	.LBB7:
+  73              		.loc 2 28 12 view .LVU12
+  74 0016 8DF81C20 		strb	r2, [sp, #28]
+  75              	.LVL2:
+  76              		.loc 2 28 12 view .LVU13
+  77              	.LBE7:
+  78              	.LBE9:
+   6:periph/msa311.cpp ****     i2c_conf.speed 			= I2CHandle::Config::Speed::I2C_100KHZ;
+  79              		.loc 1 6 2 is_stmt 1 view .LVU14
+  12:periph/msa311.cpp **** 
+  80              		.loc 1 12 13 is_stmt 0 view .LVU15
+  81 001a 03A9     		add	r1, sp, #12
+   9:periph/msa311.cpp ****     i2c_conf.pin_config.sda = seed::D12;
+  82              		.loc 1 9 29 view .LVU16
+  83 001c 1A88     		ldrh	r2, [r3]
+  10:periph/msa311.cpp **** 
+  84              		.loc 1 10 29 view .LVU17
+  85 001e 9B88     		ldrh	r3, [r3, #4]
+   9:periph/msa311.cpp ****     i2c_conf.pin_config.sda = seed::D12;
+  86              		.loc 1 9 29 view .LVU18
+  87 0020 ADF81020 		strh	r2, [sp, #16]	@ movhi
+  10:periph/msa311.cpp **** 
+  88              		.loc 1 10 29 view .LVU19
+  89 0024 ADF81230 		strh	r3, [sp, #18]	@ movhi
+   6:periph/msa311.cpp ****     i2c_conf.speed 			= I2CHandle::Config::Speed::I2C_100KHZ;
+  90              		.loc 1 6 20 view .LVU20
+  91 0028 0395     		str	r5, [sp, #12]
+   7:periph/msa311.cpp ****     i2c_conf.mode 			= I2CHandle::Config::Mode::I2C_MASTER;
+  92              		.loc 1 7 5 is_stmt 1 view .LVU21
+   8:periph/msa311.cpp ****     i2c_conf.pin_config.scl = seed::D11;
+  93              		.loc 1 8 22 is_stmt 0 view .LVU22
+  94 002a CDE90555 		strd	r5, r5, [sp, #20]
+   9:periph/msa311.cpp ****     i2c_conf.pin_config.sda = seed::D12;
+  95              		.loc 1 9 5 is_stmt 1 view .LVU23
+  10:periph/msa311.cpp **** 
+  96              		.loc 1 10 5 view .LVU24
+  12:periph/msa311.cpp **** 
+  97              		.loc 1 12 5 view .LVU25
+  12:periph/msa311.cpp **** 
+  98              		.loc 1 12 13 is_stmt 0 view .LVU26
+  99 002e FFF7FEFF 		bl	_ZN5daisy9I2CHandle4InitERKNS0_6ConfigE
+ 100              	.LVL3:
+  15:periph/msa311.cpp ****     i2c.TransmitBlocking(MSA311_I2CADDR_DEFAULT, buf, 1, 1000);
+ 101              		.loc 1 15 5 is_stmt 1 view .LVU27
+  15:periph/msa311.cpp ****     i2c.TransmitBlocking(MSA311_I2CADDR_DEFAULT, buf, 1, 1000);
+ 102              		.loc 1 15 12 is_stmt 0 view .LVU28
+ 103 0032 06F80A7F 		strb	r7, [r6, #10]!
+ 104              		.loc 1 16 5 is_stmt 1 view .LVU29
+ 105              		.loc 1 16 25 is_stmt 0 view .LVU30
+ 106 0036 3B46     		mov	r3, r7
+ 107 0038 3246     		mov	r2, r6
+ 108 003a 6221     		movs	r1, #98
+ 109 003c 2046     		mov	r0, r4
+ARM GAS  /var/folders/41/s_9r3f9s4p3_9jgx7wszdkhh0000gn/T//ccqStrif.s 			page 4
+
+
+ 110 003e CDF80080 		str	r8, [sp]
+ 111 0042 FFF7FEFF 		bl	_ZN5daisy9I2CHandle16TransmitBlockingEtPhtm
+ 112              	.LVL4:
+  17:periph/msa311.cpp ****     i2c.ReceiveBlocking(MSA311_I2CADDR_DEFAULT, buf, 1, 1000);
+ 113              		.loc 1 17 5 is_stmt 1 view .LVU31
+ 114              		.loc 1 17 24 is_stmt 0 view .LVU32
+ 115 0046 3B46     		mov	r3, r7
+ 116 0048 3246     		mov	r2, r6
+ 117 004a 6221     		movs	r1, #98
+ 118 004c 2046     		mov	r0, r4
+ 119 004e CDF80080 		str	r8, [sp]
+ 120 0052 FFF7FEFF 		bl	_ZN5daisy9I2CHandle15ReceiveBlockingEtPhtm
+ 121              	.LVL5:
+  18:periph/msa311.cpp ****     if (buf[0] != 0x13) return false;
+ 122              		.loc 1 18 5 is_stmt 1 view .LVU33
+ 123 0056 A37A     		ldrb	r3, [r4, #10]	@ zero_extendqisi2
+ 124 0058 132B     		cmp	r3, #19
+ 125 005a 03D0     		beq	.L6
+ 126              		.loc 1 18 32 is_stmt 0 view .LVU34
+ 127 005c 2846     		mov	r0, r5
+  19:periph/msa311.cpp **** 
+  20:periph/msa311.cpp ****     // Setting Data Rate (500hz)
+  21:periph/msa311.cpp ****     buf[0] = MSA311_REG_ODR;
+  22:periph/msa311.cpp **** 	buf[1] = 0b00001001;
+  23:periph/msa311.cpp **** 	i2c.TransmitBlocking(MSA311_I2CADDR_DEFAULT, buf, 2, 1000);
+  24:periph/msa311.cpp **** 
+  25:periph/msa311.cpp ****     // Setting Range (2g)
+  26:periph/msa311.cpp ****     buf[0] = MSA311_REG_RESRANGE;
+  27:periph/msa311.cpp **** 	buf[1] = 0b00000000;
+  28:periph/msa311.cpp **** 	i2c.TransmitBlocking(MSA311_I2CADDR_DEFAULT, buf, 2, 1000);
+  29:periph/msa311.cpp **** 
+  30:periph/msa311.cpp ****     // Setting Power Mode (Normal, 250Hz BW)
+  31:periph/msa311.cpp ****     buf[0] = MSA311_REG_POWERMODE;
+  32:periph/msa311.cpp **** 	buf[1] = 0b00010010;
+  33:periph/msa311.cpp **** 	i2c.TransmitBlocking(MSA311_I2CADDR_DEFAULT, buf, 2, 1000);
+  34:periph/msa311.cpp **** 
+  35:periph/msa311.cpp ****     return true;
+  36:periph/msa311.cpp **** }
+ 128              		.loc 1 36 1 view .LVU35
+ 129 005e 08B0     		add	sp, sp, #32
+ 130              		.cfi_remember_state
+ 131              		.cfi_def_cfa_offset 24
+ 132              		@ sp needed
+ 133 0060 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 134              	.LVL6:
+ 135              	.L6:
+ 136              		.cfi_restore_state
+  21:periph/msa311.cpp **** 	buf[1] = 0b00001001;
+ 137              		.loc 1 21 5 is_stmt 1 view .LVU36
+  22:periph/msa311.cpp **** 	i2c.TransmitBlocking(MSA311_I2CADDR_DEFAULT, buf, 2, 1000);
+ 138              		.loc 1 22 2 view .LVU37
+  21:periph/msa311.cpp **** 	buf[1] = 0b00001001;
+ 139              		.loc 1 21 12 is_stmt 0 view .LVU38
+ 140 0064 4FF41163 		mov	r3, #2320
+  23:periph/msa311.cpp **** 
+ 141              		.loc 1 23 22 view .LVU39
+ 142 0068 3246     		mov	r2, r6
+ARM GAS  /var/folders/41/s_9r3f9s4p3_9jgx7wszdkhh0000gn/T//ccqStrif.s 			page 5
+
+
+ 143 006a CDF80080 		str	r8, [sp]
+ 144 006e 6221     		movs	r1, #98
+  21:periph/msa311.cpp **** 	buf[1] = 0b00001001;
+ 145              		.loc 1 21 12 view .LVU40
+ 146 0070 6381     		strh	r3, [r4, #10]	@ movhi
+  23:periph/msa311.cpp **** 
+ 147              		.loc 1 23 2 is_stmt 1 view .LVU41
+  23:periph/msa311.cpp **** 
+ 148              		.loc 1 23 22 is_stmt 0 view .LVU42
+ 149 0072 2046     		mov	r0, r4
+ 150 0074 0223     		movs	r3, #2
+ 151 0076 FFF7FEFF 		bl	_ZN5daisy9I2CHandle16TransmitBlockingEtPhtm
+ 152              	.LVL7:
+  26:periph/msa311.cpp **** 	buf[1] = 0b00000000;
+ 153              		.loc 1 26 5 is_stmt 1 view .LVU43
+  27:periph/msa311.cpp **** 	i2c.TransmitBlocking(MSA311_I2CADDR_DEFAULT, buf, 2, 1000);
+ 154              		.loc 1 27 2 view .LVU44
+  26:periph/msa311.cpp **** 	buf[1] = 0b00000000;
+ 155              		.loc 1 26 12 is_stmt 0 view .LVU45
+ 156 007a 0F23     		movs	r3, #15
+  28:periph/msa311.cpp **** 
+ 157              		.loc 1 28 22 view .LVU46
+ 158 007c 3246     		mov	r2, r6
+ 159 007e CDF80080 		str	r8, [sp]
+ 160 0082 6221     		movs	r1, #98
+  26:periph/msa311.cpp **** 	buf[1] = 0b00000000;
+ 161              		.loc 1 26 12 view .LVU47
+ 162 0084 6381     		strh	r3, [r4, #10]	@ movhi
+  28:periph/msa311.cpp **** 
+ 163              		.loc 1 28 2 is_stmt 1 view .LVU48
+  28:periph/msa311.cpp **** 
+ 164              		.loc 1 28 22 is_stmt 0 view .LVU49
+ 165 0086 2046     		mov	r0, r4
+ 166 0088 0223     		movs	r3, #2
+ 167 008a FFF7FEFF 		bl	_ZN5daisy9I2CHandle16TransmitBlockingEtPhtm
+ 168              	.LVL8:
+  31:periph/msa311.cpp **** 	buf[1] = 0b00010010;
+ 169              		.loc 1 31 5 is_stmt 1 view .LVU50
+  32:periph/msa311.cpp **** 	i2c.TransmitBlocking(MSA311_I2CADDR_DEFAULT, buf, 2, 1000);
+ 170              		.loc 1 32 2 view .LVU51
+  31:periph/msa311.cpp **** 	buf[1] = 0b00010010;
+ 171              		.loc 1 31 12 is_stmt 0 view .LVU52
+ 172 008e 41F21121 		movw	r1, #4625
+  33:periph/msa311.cpp **** 
+ 173              		.loc 1 33 22 view .LVU53
+ 174 0092 CDF80080 		str	r8, [sp]
+ 175 0096 3246     		mov	r2, r6
+  31:periph/msa311.cpp **** 	buf[1] = 0b00010010;
+ 176              		.loc 1 31 12 view .LVU54
+ 177 0098 6181     		strh	r1, [r4, #10]	@ movhi
+  33:periph/msa311.cpp **** 
+ 178              		.loc 1 33 2 is_stmt 1 view .LVU55
+  33:periph/msa311.cpp **** 
+ 179              		.loc 1 33 22 is_stmt 0 view .LVU56
+ 180 009a 0223     		movs	r3, #2
+ 181 009c 2046     		mov	r0, r4
+ 182 009e 6221     		movs	r1, #98
+ARM GAS  /var/folders/41/s_9r3f9s4p3_9jgx7wszdkhh0000gn/T//ccqStrif.s 			page 6
+
+
+ 183 00a0 FFF7FEFF 		bl	_ZN5daisy9I2CHandle16TransmitBlockingEtPhtm
+ 184              	.LVL9:
+  35:periph/msa311.cpp **** }
+ 185              		.loc 1 35 5 is_stmt 1 view .LVU57
+  35:periph/msa311.cpp **** }
+ 186              		.loc 1 35 12 is_stmt 0 view .LVU58
+ 187 00a4 3846     		mov	r0, r7
+ 188              		.loc 1 36 1 view .LVU59
+ 189 00a6 08B0     		add	sp, sp, #32
+ 190              		.cfi_def_cfa_offset 24
+ 191              		@ sp needed
+ 192 00a8 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 193              	.LVL10:
+ 194              	.L8:
+ 195              		.loc 1 36 1 view .LVU60
+ 196              		.align	2
+ 197              	.L7:
+ 198 00ac 00000000 		.word	.LANCHOR0
+ 199              		.cfi_endproc
+ 200              	.LFE4694:
+ 202              		.section	.text._ZN6MSA3116UpdateEv,"ax",%progbits
+ 203              		.align	1
+ 204              		.p2align 2,,3
+ 205              		.global	_ZN6MSA3116UpdateEv
+ 206              		.syntax unified
+ 207              		.thumb
+ 208              		.thumb_func
+ 210              	_ZN6MSA3116UpdateEv:
+ 211              	.LVL11:
+ 212              	.LFB4695:
+  37:periph/msa311.cpp **** 
+  38:periph/msa311.cpp **** void MSA311::Update() {
+ 213              		.loc 1 38 23 is_stmt 1 view -0
+ 214              		.cfi_startproc
+ 215              		@ args = 0, pretend = 0, frame = 8
+ 216              		@ frame_needed = 0, uses_anonymous_args = 0
+  39:periph/msa311.cpp ****     buf[0] = MSA311_REG_OUT_X_L;
+ 217              		.loc 1 39 5 view .LVU62
+  38:periph/msa311.cpp ****     buf[0] = MSA311_REG_OUT_X_L;
+ 218              		.loc 1 38 23 is_stmt 0 view .LVU63
+ 219 0000 70B5     		push	{r4, r5, r6, lr}
+ 220              		.cfi_def_cfa_offset 16
+ 221              		.cfi_offset 4, -16
+ 222              		.cfi_offset 5, -12
+ 223              		.cfi_offset 6, -8
+ 224              		.cfi_offset 14, -4
+ 225              		.loc 1 39 12 view .LVU64
+ 226 0002 0246     		mov	r2, r0
+  38:periph/msa311.cpp ****     buf[0] = MSA311_REG_OUT_X_L;
+ 227              		.loc 1 38 23 view .LVU65
+ 228 0004 84B0     		sub	sp, sp, #16
+ 229              		.cfi_def_cfa_offset 32
+ 230              		.loc 1 39 12 view .LVU66
+ 231 0006 0226     		movs	r6, #2
+  40:periph/msa311.cpp ****     i2c.TransmitBlocking(MSA311_I2CADDR_DEFAULT, buf, 1, 1000);
+ 232              		.loc 1 40 25 view .LVU67
+ 233 0008 4FF47A75 		mov	r5, #1000
+ARM GAS  /var/folders/41/s_9r3f9s4p3_9jgx7wszdkhh0000gn/T//ccqStrif.s 			page 7
+
+
+  38:periph/msa311.cpp ****     buf[0] = MSA311_REG_OUT_X_L;
+ 234              		.loc 1 38 23 view .LVU68
+ 235 000c 0446     		mov	r4, r0
+ 236              		.loc 1 40 25 view .LVU69
+ 237 000e 0123     		movs	r3, #1
+ 238 0010 6221     		movs	r1, #98
+ 239 0012 0095     		str	r5, [sp]
+  39:periph/msa311.cpp ****     buf[0] = MSA311_REG_OUT_X_L;
+ 240              		.loc 1 39 12 view .LVU70
+ 241 0014 02F80A6F 		strb	r6, [r2, #10]!
+ 242              		.loc 1 40 5 is_stmt 1 view .LVU71
+ 243              		.loc 1 40 25 is_stmt 0 view .LVU72
+ 244 0018 0392     		str	r2, [sp, #12]
+ 245 001a FFF7FEFF 		bl	_ZN5daisy9I2CHandle16TransmitBlockingEtPhtm
+ 246              	.LVL12:
+  41:periph/msa311.cpp ****     i2c.ReceiveBlocking(MSA311_I2CADDR_DEFAULT, buf, 2, 1000);
+ 247              		.loc 1 41 5 is_stmt 1 view .LVU73
+ 248              		.loc 1 41 24 is_stmt 0 view .LVU74
+ 249 001e 039A     		ldr	r2, [sp, #12]
+ 250 0020 3346     		mov	r3, r6
+ 251 0022 6221     		movs	r1, #98
+ 252 0024 2046     		mov	r0, r4
+ 253 0026 0095     		str	r5, [sp]
+ 254 0028 FFF7FEFF 		bl	_ZN5daisy9I2CHandle15ReceiveBlockingEtPhtm
+ 255              	.LVL13:
+  42:periph/msa311.cpp ****     int16_t x = 0 | (buf[0] >> 4);
+ 256              		.loc 1 42 5 is_stmt 1 view .LVU75
+  43:periph/msa311.cpp ****     x |= buf[1] << 4;
+ 257              		.loc 1 43 15 is_stmt 0 view .LVU76
+ 258 002c E17A     		ldrb	r1, [r4, #11]	@ zero_extendqisi2
+  42:periph/msa311.cpp ****     int16_t x = 0 | (buf[0] >> 4);
+ 259              		.loc 1 42 29 view .LVU77
+ 260 002e A07A     		ldrb	r0, [r4, #10]	@ zero_extendqisi2
+ 261              	.LVL14:
+ 262              		.loc 1 43 5 is_stmt 1 view .LVU78
+ 263              		.loc 1 43 17 is_stmt 0 view .LVU79
+ 264 0030 0B01     		lsls	r3, r1, #4
+  44:periph/msa311.cpp ****     if ((buf[1] >> 7) == 1) x |= 0b1111 << 12;
+ 265              		.loc 1 44 5 view .LVU80
+ 266 0032 CA09     		lsrs	r2, r1, #7
+ 267 0034 039A     		ldr	r2, [sp, #12]
+  43:periph/msa311.cpp ****     x |= buf[1] << 4;
+ 268              		.loc 1 43 7 view .LVU81
+ 269 0036 43EA1013 		orr	r3, r3, r0, lsr #4
+ 270              	.LVL15:
+ 271              		.loc 1 44 5 is_stmt 1 view .LVU82
+ 272 003a 03D0     		beq	.L10
+ 273              		.loc 1 44 29 discriminator 1 view .LVU83
+ 274              		.loc 1 44 31 is_stmt 0 discriminator 1 view .LVU84
+ 275 003c 6FEA0353 		mvn	r3, r3, lsl #20
+ 276              	.LVL16:
+ 277              		.loc 1 44 31 discriminator 1 view .LVU85
+ 278 0040 6FEA1353 		mvn	r3, r3, lsr #20
+ 279              	.LVL17:
+ 280              	.L10:
+  45:periph/msa311.cpp ****     X = x;
+ 281              		.loc 1 45 5 is_stmt 1 view .LVU86
+ARM GAS  /var/folders/41/s_9r3f9s4p3_9jgx7wszdkhh0000gn/T//ccqStrif.s 			page 8
+
+
+  46:periph/msa311.cpp **** 
+  47:periph/msa311.cpp ****     buf[0] = MSA311_REG_OUT_Y_L;
+  48:periph/msa311.cpp ****     i2c.TransmitBlocking(MSA311_I2CADDR_DEFAULT, buf, 1, 1000);
+ 282              		.loc 1 48 25 is_stmt 0 view .LVU87
+ 283 0044 4FF47A75 		mov	r5, #1000
+  47:periph/msa311.cpp ****     i2c.TransmitBlocking(MSA311_I2CADDR_DEFAULT, buf, 1, 1000);
+ 284              		.loc 1 47 12 view .LVU88
+ 285 0048 0421     		movs	r1, #4
+  45:periph/msa311.cpp ****     X = x;
+ 286              		.loc 1 45 7 view .LVU89
+ 287 004a A380     		strh	r3, [r4, #4]	@ movhi
+  47:periph/msa311.cpp ****     i2c.TransmitBlocking(MSA311_I2CADDR_DEFAULT, buf, 1, 1000);
+ 288              		.loc 1 47 5 is_stmt 1 view .LVU90
+ 289              		.loc 1 48 25 is_stmt 0 view .LVU91
+ 290 004c 2046     		mov	r0, r4
+  47:periph/msa311.cpp ****     i2c.TransmitBlocking(MSA311_I2CADDR_DEFAULT, buf, 1, 1000);
+ 291              		.loc 1 47 12 view .LVU92
+ 292 004e A172     		strb	r1, [r4, #10]
+ 293              		.loc 1 48 5 is_stmt 1 view .LVU93
+ 294              		.loc 1 48 25 is_stmt 0 view .LVU94
+ 295 0050 0123     		movs	r3, #1
+ 296              	.LVL18:
+ 297              		.loc 1 48 25 view .LVU95
+ 298 0052 6221     		movs	r1, #98
+ 299 0054 0095     		str	r5, [sp]
+ 300              	.LVL19:
+ 301              		.loc 1 48 25 view .LVU96
+ 302 0056 0392     		str	r2, [sp, #12]
+ 303 0058 FFF7FEFF 		bl	_ZN5daisy9I2CHandle16TransmitBlockingEtPhtm
+ 304              	.LVL20:
+  49:periph/msa311.cpp ****     i2c.ReceiveBlocking(MSA311_I2CADDR_DEFAULT, buf, 2, 1000);
+ 305              		.loc 1 49 5 is_stmt 1 view .LVU97
+ 306              		.loc 1 49 24 is_stmt 0 view .LVU98
+ 307 005c 039A     		ldr	r2, [sp, #12]
+ 308 005e 0223     		movs	r3, #2
+ 309 0060 6221     		movs	r1, #98
+ 310 0062 2046     		mov	r0, r4
+ 311 0064 0095     		str	r5, [sp]
+ 312 0066 FFF7FEFF 		bl	_ZN5daisy9I2CHandle15ReceiveBlockingEtPhtm
+ 313              	.LVL21:
+  50:periph/msa311.cpp ****     int16_t y = 0 | (buf[0] >> 4);
+ 314              		.loc 1 50 5 is_stmt 1 view .LVU99
+  51:periph/msa311.cpp ****     y |= buf[1] << 4;
+ 315              		.loc 1 51 15 is_stmt 0 view .LVU100
+ 316 006a E17A     		ldrb	r1, [r4, #11]	@ zero_extendqisi2
+  50:periph/msa311.cpp ****     int16_t y = 0 | (buf[0] >> 4);
+ 317              		.loc 1 50 29 view .LVU101
+ 318 006c A07A     		ldrb	r0, [r4, #10]	@ zero_extendqisi2
+ 319              	.LVL22:
+ 320              		.loc 1 51 5 is_stmt 1 view .LVU102
+ 321              		.loc 1 51 17 is_stmt 0 view .LVU103
+ 322 006e 0B01     		lsls	r3, r1, #4
+  52:periph/msa311.cpp ****     if ((buf[1] >> 7) == 1) y |= 0b1111 << 12;
+ 323              		.loc 1 52 5 view .LVU104
+ 324 0070 CA09     		lsrs	r2, r1, #7
+ 325 0072 039A     		ldr	r2, [sp, #12]
+  51:periph/msa311.cpp ****     y |= buf[1] << 4;
+ARM GAS  /var/folders/41/s_9r3f9s4p3_9jgx7wszdkhh0000gn/T//ccqStrif.s 			page 9
+
+
+ 326              		.loc 1 51 7 view .LVU105
+ 327 0074 43EA1013 		orr	r3, r3, r0, lsr #4
+ 328              	.LVL23:
+ 329              		.loc 1 52 5 is_stmt 1 view .LVU106
+ 330 0078 03D0     		beq	.L11
+ 331              		.loc 1 52 29 discriminator 1 view .LVU107
+ 332              		.loc 1 52 31 is_stmt 0 discriminator 1 view .LVU108
+ 333 007a 6FEA0353 		mvn	r3, r3, lsl #20
+ 334              	.LVL24:
+ 335              		.loc 1 52 31 discriminator 1 view .LVU109
+ 336 007e 6FEA1353 		mvn	r3, r3, lsr #20
+ 337              	.LVL25:
+ 338              	.L11:
+  53:periph/msa311.cpp ****     Y = y;
+ 339              		.loc 1 53 5 is_stmt 1 view .LVU110
+  54:periph/msa311.cpp **** 
+  55:periph/msa311.cpp ****     buf[0] = MSA311_REG_OUT_Z_L;
+  56:periph/msa311.cpp ****     i2c.TransmitBlocking(MSA311_I2CADDR_DEFAULT, buf, 1, 1000);
+ 340              		.loc 1 56 25 is_stmt 0 view .LVU111
+ 341 0082 4FF47A75 		mov	r5, #1000
+  55:periph/msa311.cpp ****     i2c.TransmitBlocking(MSA311_I2CADDR_DEFAULT, buf, 1, 1000);
+ 342              		.loc 1 55 12 view .LVU112
+ 343 0086 0621     		movs	r1, #6
+  53:periph/msa311.cpp ****     Y = y;
+ 344              		.loc 1 53 7 view .LVU113
+ 345 0088 E380     		strh	r3, [r4, #6]	@ movhi
+  55:periph/msa311.cpp ****     i2c.TransmitBlocking(MSA311_I2CADDR_DEFAULT, buf, 1, 1000);
+ 346              		.loc 1 55 5 is_stmt 1 view .LVU114
+ 347              		.loc 1 56 25 is_stmt 0 view .LVU115
+ 348 008a 2046     		mov	r0, r4
+  55:periph/msa311.cpp ****     i2c.TransmitBlocking(MSA311_I2CADDR_DEFAULT, buf, 1, 1000);
+ 349              		.loc 1 55 12 view .LVU116
+ 350 008c A172     		strb	r1, [r4, #10]
+ 351              		.loc 1 56 5 is_stmt 1 view .LVU117
+ 352              		.loc 1 56 25 is_stmt 0 view .LVU118
+ 353 008e 0123     		movs	r3, #1
+ 354              	.LVL26:
+ 355              		.loc 1 56 25 view .LVU119
+ 356 0090 6221     		movs	r1, #98
+ 357 0092 0095     		str	r5, [sp]
+ 358              	.LVL27:
+ 359              		.loc 1 56 25 view .LVU120
+ 360 0094 0392     		str	r2, [sp, #12]
+ 361 0096 FFF7FEFF 		bl	_ZN5daisy9I2CHandle16TransmitBlockingEtPhtm
+ 362              	.LVL28:
+  57:periph/msa311.cpp ****     i2c.ReceiveBlocking(MSA311_I2CADDR_DEFAULT, buf, 2, 1000);
+ 363              		.loc 1 57 5 is_stmt 1 view .LVU121
+ 364              		.loc 1 57 24 is_stmt 0 view .LVU122
+ 365 009a 0223     		movs	r3, #2
+ 366 009c 039A     		ldr	r2, [sp, #12]
+ 367 009e 6221     		movs	r1, #98
+ 368 00a0 2046     		mov	r0, r4
+ 369 00a2 0095     		str	r5, [sp]
+ 370 00a4 FFF7FEFF 		bl	_ZN5daisy9I2CHandle15ReceiveBlockingEtPhtm
+ 371              	.LVL29:
+  58:periph/msa311.cpp ****     int16_t z = 0 | (buf[0] >> 4);
+ 372              		.loc 1 58 5 is_stmt 1 view .LVU123
+ARM GAS  /var/folders/41/s_9r3f9s4p3_9jgx7wszdkhh0000gn/T//ccqStrif.s 			page 10
+
+
+  59:periph/msa311.cpp ****     z |= buf[1] << 4;
+ 373              		.loc 1 59 15 is_stmt 0 view .LVU124
+ 374 00a8 E27A     		ldrb	r2, [r4, #11]	@ zero_extendqisi2
+  58:periph/msa311.cpp ****     int16_t z = 0 | (buf[0] >> 4);
+ 375              		.loc 1 58 29 view .LVU125
+ 376 00aa A17A     		ldrb	r1, [r4, #10]	@ zero_extendqisi2
+ 377              	.LVL30:
+ 378              		.loc 1 59 5 is_stmt 1 view .LVU126
+ 379              		.loc 1 59 17 is_stmt 0 view .LVU127
+ 380 00ac 1301     		lsls	r3, r2, #4
+  60:periph/msa311.cpp ****     if ((buf[1] >> 7) == 1) z |= 0b1111 << 12;
+ 381              		.loc 1 60 5 view .LVU128
+ 382 00ae D209     		lsrs	r2, r2, #7
+  59:periph/msa311.cpp ****     z |= buf[1] << 4;
+ 383              		.loc 1 59 7 view .LVU129
+ 384 00b0 43EA1113 		orr	r3, r3, r1, lsr #4
+ 385              	.LVL31:
+ 386              		.loc 1 60 5 is_stmt 1 view .LVU130
+ 387 00b4 03D0     		beq	.L12
+ 388              		.loc 1 60 29 discriminator 1 view .LVU131
+ 389              		.loc 1 60 31 is_stmt 0 discriminator 1 view .LVU132
+ 390 00b6 6FEA0353 		mvn	r3, r3, lsl #20
+ 391              	.LVL32:
+ 392              		.loc 1 60 31 discriminator 1 view .LVU133
+ 393 00ba 6FEA1353 		mvn	r3, r3, lsr #20
+ 394              	.LVL33:
+ 395              	.L12:
+  61:periph/msa311.cpp ****     Z = z;
+ 396              		.loc 1 61 5 is_stmt 1 view .LVU134
+ 397              		.loc 1 61 7 is_stmt 0 view .LVU135
+ 398 00be 2381     		strh	r3, [r4, #8]	@ movhi
+  62:periph/msa311.cpp **** }...
+ 399              		.loc 1 62 1 view .LVU136
+ 400 00c0 04B0     		add	sp, sp, #16
+ 401              		.cfi_def_cfa_offset 16
+ 402              		@ sp needed
+ 403 00c2 70BD     		pop	{r4, r5, r6, pc}
+ 404              		.loc 1 62 1 view .LVU137
+ 405              		.cfi_endproc
+ 406              	.LFE4695:
+ 408              		.section	.rodata
+ 409              		.align	2
+ 410              		.set	.LANCHOR0,. + 0
+ 411              	.LC0:
+ 412 0000 01       		.byte	1
+ 413 0001 08       		.byte	8
+ 414 0002 0000     		.space	2
+ 415              	.LC1:
+ 416 0004 01       		.byte	1
+ 417 0005 09       		.byte	9
+ 418              		.text
+ 419              	.Letext0:
+ 420              		.file 3 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/machine/_default_types.h"
+ 421              		.file 4 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_stdint.h"
+ 422              		.file 5 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdint.h"
+ 423              		.file 6 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h"
+ 424              		.file 7 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cmath"
+ARM GAS  /var/folders/41/s_9r3f9s4p3_9jgx7wszdkhh0000gn/T//ccqStrif.s 			page 11
+
+
+ 425              		.file 8 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_abs.h"
+ 426              		.file 9 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdlib"
+ 427              		.file 10 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdint"
+ 428              		.file 11 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/type_traits"
+ 429              		.file 12 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/debug/debug.h"
+ 430              		.file 13 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v
+ 431              		.file 14 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/algorithmfwd.h"
+ 432              		.file 15 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h"
+ 433              		.file 16 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/exception_ptr.h"
+ 434              		.file 17 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdarg"
+ 435              		.file 18 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdio"
+ 436              		.file 19 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstring"
+ 437              		.file 20 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cwchar"
+ 438              		.file 21 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/clocale"
+ 439              		.file 22 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/basic_string.h"
+ 440              		.file 23 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_iterator.h"
+ 441              		.file 24 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/predefined_ops.h
+ 442              		.file 25 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_types.h"
+ 443              		.file 26 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/reent.h"
+ 444              		.file 27 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/lock.h"
+ 445              		.file 28 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/math.h"
+ 446              		.file 29 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdlib.h"
+ 447              		.file 30 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/math.h"
+ 448              		.file 31 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/stdlib.h"
+ 449              		.file 32 "../libDaisy//src/daisy_core.h"
+ 450              		.file 33 "../libDaisy//src/util/wav_format.h"
+ 451              		.file 34 "../libDaisy//src/dev/max11300.h"
+ 452              		.file 35 "../libDaisy//src/daisy_seed.h"
+ 453              		.file 36 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h"
+ 454              		.file 37 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdio.h"
+ 455              		.file 38 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/string.h"
+ 456              		.file 39 "../DaisySP//Source/Control/adenv.h"
+ 457              		.file 40 "../DaisySP//Source/Utility/dsp.h"
+ 458              		.file 41 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/wchar.h"
+ 459              		.file 42 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/locale.h"
+ 460              		.file 43 "periph/msa311.h"
+ 461              		.file 44 "../libDaisy//src/dev/sr_595.h"
+ 462              		.file 45 "<built-in>"
+ARM GAS  /var/folders/41/s_9r3f9s4p3_9jgx7wszdkhh0000gn/T//ccqStrif.s 			page 12
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 msa311.cpp
+/var/folders/41/s_9r3f9s4p3_9jgx7wszdkhh0000gn/T//ccqStrif.s:19     .text._ZN6MSA3114InitEv:0000000000000000 $t
+/var/folders/41/s_9r3f9s4p3_9jgx7wszdkhh0000gn/T//ccqStrif.s:26     .text._ZN6MSA3114InitEv:0000000000000000 _ZN6MSA3114InitEv
+/var/folders/41/s_9r3f9s4p3_9jgx7wszdkhh0000gn/T//ccqStrif.s:198    .text._ZN6MSA3114InitEv:00000000000000ac $d
+/var/folders/41/s_9r3f9s4p3_9jgx7wszdkhh0000gn/T//ccqStrif.s:203    .text._ZN6MSA3116UpdateEv:0000000000000000 $t
+/var/folders/41/s_9r3f9s4p3_9jgx7wszdkhh0000gn/T//ccqStrif.s:210    .text._ZN6MSA3116UpdateEv:0000000000000000 _ZN6MSA3116UpdateEv
+/var/folders/41/s_9r3f9s4p3_9jgx7wszdkhh0000gn/T//ccqStrif.s:409    .rodata:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+_ZN5daisy9I2CHandle4InitERKNS0_6ConfigE
+_ZN5daisy9I2CHandle16TransmitBlockingEtPhtm
+_ZN5daisy9I2CHandle15ReceiveBlockingEtPhtm
