@@ -2,7 +2,6 @@
 #ifndef MSA311_H
 #define MSA311_H
 #include <daisy_seed.h>
-#include <daisysp.h>
 /*=========================================================================
 I2C ADDRESS/BITS
 -----------------------------------------------------------------------*/
@@ -30,15 +29,37 @@ I2C ADDRESS/BITS
 #define MSA311_REG_TAPDUR 0x2A    ///< Register address for tap duration
 #define MSA311_REG_TAPTH 0x2B     ///< Register address for tap threshold
 
+#define TIMEOUT 1000
+
 using namespace daisy;
 
 class MSA311 {
-private:
-    I2CHandle i2c;
+public:
+    I2CHandle *i2c;
     int16_t X;
     int16_t Y;
     int16_t Z;
     uint8_t buf[2];
+
+    /**
+     * @brief Reads selected register into buffer
+     * @param REG register to be read from
+     * @param size number of bytes to read
+     */
+    void Read(uint16_t REG, uint16_t size);
+
+    /**
+     * @brief Reads selected register into buffer
+     * @param REG register to be read from
+     * @param size number of bytes to read
+     */
+    void ReadDMA(uint16_t REG, uint16_t size);
+
+    /**
+     * @brief convert bytes in buffer to signed integer
+     * @return signed integer
+     */
+    int16_t byteToInt();
 
 public:
     MSA311() {};
@@ -47,7 +68,7 @@ public:
      * @brief Initialize the device to default settings
      * @return boolean if initialization was successful or not
      */
-    bool Init();
+    bool Init(I2CHandle *_i2c);
 
     /**
      * @brief Called to update X Y, and Z coordinates

@@ -34,3 +34,6 @@
 # Libraries
 libDaisy/
 DaisySP/
+
+# Build
+*/build/
