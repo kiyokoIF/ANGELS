@@ -31,9 +31,5 @@
 *.out
 *.app
 
-# Libraries
-libDaisy/
-DaisySP/
-
 # Build
 */build/

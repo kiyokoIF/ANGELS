@@ -18,7 +18,7 @@ bool CAP1188::Init(I2CHandle *_i2c) {
     i2c->TransmitBlocking(CAP1188_I2CADDR, buf, 2, TIMEOUT);
 
     buf[0] = CAP1188_MAIN;
-    buf[1] = 0x00 || GAIN << 6;
+    buf[1] = 0x00 | (GAIN << 6);
     i2c->TransmitBlocking(CAP1188_I2CADDR, buf, 2, TIMEOUT);
 
     buf[0] = CAP1188_INT_EN;
@@ -44,7 +44,7 @@ void CAP1188::Update() {
     // resetting interupt bit
     if (sens) {
         buf[0] = CAP1188_MAIN;
-        buf[1] = 0x00 || GAIN << 6;
+        buf[1] = 0x00 | (GAIN << 6);
         i2c->TransmitBlocking(CAP1188_I2CADDR, buf, 2, TIMEOUT);
     }
 }

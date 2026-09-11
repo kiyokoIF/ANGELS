@@ -70,11 +70,11 @@ int main(void)
     audio_config.samplerate = SaiHandle::Config::SampleRate::SAI_48KHZ;
     audio_config.postgain   = 1.f;
 
-	// hw.audio_handle.DeInit(); will deinit sai1 as well which is bad. I don't think reinitializing is bad
+	// hw.audio_handle.DeInit(); // will deinit sai1 as well which is bad. I don't think reinitializing is bad
     hw.audio_handle.Init(audio_config, hw.AudioSaiHandle(), sai_2_handle_);
 
 	// reupdating those things
-	hw.SetAudioBlockSize(4); // number of samples handled per callback
+	hw.SetAudioBlockSize(48); // number of samples handled per callback
 	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
 
 	osc.Init(hw.AudioSampleRate());
