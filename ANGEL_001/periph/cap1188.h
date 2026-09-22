@@ -52,6 +52,12 @@ private:
     I2CHandle *i2c;
     uint8_t sens;
 
+    /**
+     * @brief Read a register
+     * 
+     * @param REG 
+     * @param size 
+     */
     void Read(uint16_t REG, uint16_t size);
 
     uint8_t buf[2];
@@ -59,10 +65,26 @@ private:
 public:
     CAP1188() {}
 
+    /**
+     * @brief Initialize the CAP1188 chip
+     * 
+     * @param _i2c I2C Handle object for this chip.
+     * @return true: initialized successfully
+     * @return false: could not find the chip
+     */
     bool Init(I2CHandle *_i2c);
 
+    /**
+     * @brief 
+     * 
+     */
     void Update();
 
+    /**
+     * @brief Get sensor status
+     * 
+     * @return uint8_t 
+     */
     uint8_t getSens() { return sens; };
 
 };

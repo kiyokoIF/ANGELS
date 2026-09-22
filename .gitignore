@@ -33,3 +33,7 @@
 
 # Build
 */build/
+
+# PCB backups and git
+*/*-backups/
+*/.history/

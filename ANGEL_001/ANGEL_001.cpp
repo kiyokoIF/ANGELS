@@ -26,10 +26,7 @@ MSA311 *accel;
 
 CAP1188 *cap;
 
-SGTL5000 *codec;
-
 I2CHandle i2c;
-
 SaiHandle sai_2_handle_;
 
 Oscillator osc;
@@ -38,8 +35,11 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 {
 	for (size_t i = 0; i < size; i++)
 	{
-		out[0][i] = osc.Process();
-		out[1][i] = out[0][i];
+		float sig = osc.Process();
+		out[0][i] = sig;
+		out[1][i] = sig;
+		out[2][i] = sig;
+		out[3][i] = sig;
 	}
 }
 
@@ -50,12 +50,12 @@ int main(void)
 	// Adding secondary SAI i2s output
 	SaiHandle::Config sai2Config;
 	sai2Config.periph          = SaiHandle::Config::Peripheral::SAI_2;
-    sai2Config.sr              = SaiHandle::Config::SampleRate::SAI_48KHZ;
-    sai2Config.bit_depth       = SaiHandle::Config::BitDepth::SAI_24BIT;
+    sai2Config.sr              = SaiHandle::Config::SampleRate::SAI_8KHZ;
+    sai2Config.bit_depth       = SaiHandle::Config::BitDepth::SAI_16BIT;
     sai2Config.a_sync          = SaiHandle::Config::Sync::SLAVE;
     sai2Config.b_sync          = SaiHandle::Config::Sync::MASTER;
     sai2Config.a_dir           = SaiHandle::Config::Direction::TRANSMIT;
-    sai2Config.b_dir           = SaiHandle::Config::Direction::RECEIVE;
+    sai2Config.b_dir           = SaiHandle::Config::Direction::TRANSMIT;
     sai2Config.pin_config.fs   = seed::D27;
     sai2Config.pin_config.mclk = seed::D24;
     sai2Config.pin_config.sck  = seed::D28;
@@ -66,18 +66,20 @@ int main(void)
 
 	// Setting Audio to work with i2s out
     AudioHandle::Config audio_config;
-    audio_config.blocksize  = 48;
-    audio_config.samplerate = SaiHandle::Config::SampleRate::SAI_48KHZ;
+    audio_config.blocksize  = 64;
+    audio_config.samplerate = SaiHandle::Config::SampleRate::SAI_8KHZ;
     audio_config.postgain   = 1.f;
 
 	// hw.audio_handle.DeInit(); // will deinit sai1 as well which is bad. I don't think reinitializing is bad
     hw.audio_handle.Init(audio_config, hw.AudioSaiHandle(), sai_2_handle_);
 
-	// reupdating those things
-	hw.SetAudioBlockSize(48); // number of samples handled per callback
-	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
+	hw.SetAudioBlockSize(4);
+	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_8KHZ);
 
 	osc.Init(hw.AudioSampleRate());
+	osc.SetFreq(50);
+	osc.SetAmp(1);
+	osc.SetWaveform(osc.WAVE_SQUARE);
 
 	// Setting up ADCs
 	AdcChannelConfig adc_config[ADC_CHANNELS];
@@ -124,7 +126,7 @@ int main(void)
 
 	System::Delay(500);
 
-	cap = new CAP1188();
+	cap = new CAP1188(); 
 
 	if (!cap->Init(&i2c)) {
 		hw.PrintLine("CAP1188 not found");
@@ -135,36 +137,24 @@ int main(void)
 
 	System::Delay(500);
 
-	codec = new SGTL5000();
-
-	hw.PrintLine("%d", codec->Init(&i2c));
-	while(1){}
-
-	if (!codec->Init(&i2c)) {
-		hw.PrintLine("%d", codec->Init(&i2c));
-		while(1){}
-	} else {
-		hw.PrintLine("SGTL5000 found");
-	}
-
 	// Start Audio
 	hw.StartAudio(AudioCallback);
 	
 	while(1) {
 
-		for (int i = 0; i < ADC_CHANNELS; i++) {
-			int value = hw.adc.Get(i);
+		// for (int i = 0; i < ADC_CHANNELS; i++) {
+		// 	int value = hw.adc.Get(i);
 
-			float percent = (float) value / 65536.0f;
+		// 	float percent = (float) value / 65536.0f;
 
-			hw.Print("ADC%d: %.3f  ", i, percent);
-		}
+		// 	hw.Print("ADC%d: %.3f  ", i, percent);
+		// }
 
-		accel->Update();
-		cap->Update();
+		// accel->Update();
+		// cap->Update();
 
-		hw.PrintLine("X: %5d, Y: %5d, Z:%5d, CAP:"BYTE_TO_BINARY_PATTERN, accel->getX(), accel->getY(), accel->getZ(), BYTE_TO_BINARY(cap->getSens()));
+		// hw.PrintLine("X: %5d, Y: %5d, Z:%5d, CAP:" BYTE_TO_BINARY_PATTERN, accel->getX(), accel->getY(), accel->getZ(), BYTE_TO_BINARY(cap->getSens()));
 
-		System::Delay(100);
+		// System::Delay(100);
 	}
 }
