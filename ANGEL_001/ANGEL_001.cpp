@@ -77,7 +77,7 @@ int main(void)
 	osc.Init(hw.AudioSampleRate());
 	osc.SetFreq(50);
 	osc.SetAmp(1);
-	osc.SetWaveform(osc.WAVE_SIN);
+	osc.SetWaveform(osc.WAVE_SIN); 
 
 	// Setting up ADCs
 	AdcChannelConfig adc_config[ADC_CHANNELS];
