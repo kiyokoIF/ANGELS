@@ -7,7 +7,7 @@ CPP_SOURCES += periph/msa311.cpp
 CPP_SOURCES += periph/cap1188.cpp
 
 # Load program into SRAM instead of Flash (can also be QSPI)
-APP_TYPE = BOOT_SRAM
+APP_TYPE = BOOT_NONE
 
 LDFLAGS = -u _printf_float
 

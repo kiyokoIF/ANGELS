@@ -31,6 +31,7 @@
       "label": "build_and_program_dfu",
       "options": {
         "cwd": "${workspaceFolder}"
+        
       },
       "problemMatcher": [
         "$gcc"
