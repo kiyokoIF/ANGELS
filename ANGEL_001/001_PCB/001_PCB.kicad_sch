@@ -10745,7 +10745,7 @@
 	)
 	(text "Add test point pins to QSPI, i2s, i2c, power (all levels), gnd"
 		(exclude_from_sim no)
-		(at 63.246 105.664 0)
+		(at 54.356 105.664 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11810,6 +11810,16 @@
 			(type default)
 		)
 		(uuid "0d485633-d6fd-4e2b-8b7d-d314cf9f0c7a")
+	)
+	(wire
+		(pts
+			(xy 140.97 107.95) (xy 132.08 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0e170de1-b26d-49c6-974a-0816197696cc")
 	)
 	(wire
 		(pts
@@ -16290,6 +16300,16 @@
 			(justify left bottom)
 		)
 		(uuid "6ffd4be2-cbb0-4d0d-bc51-a78ce66a55b3")
+	)
+	(label "BOOT"
+		(at 140.97 107.95 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "70a01e4d-8bc2-4c8b-9a0d-6773877e2f81")
 	)
 	(label "QSPI_IO2"
 		(at 74.93 92.71 0)
@@ -30907,9 +30927,11 @@
 		)
 		(pin "60"
 			(uuid "75cbe172-0c7d-4eb4-bf28-f83290acffb0")
+			(alternate "QUADSPI_BK1_IO3")
 		)
 		(pin "59"
 			(uuid "05536607-e1f6-46ed-849e-cb6f3032feb7")
+			(alternate "QUADSPI_BK1_IO1")
 		)
 		(pin "47"
 			(uuid "3615392f-d1e1-481b-93d2-3f61f1cbbd67")
@@ -30926,6 +30948,7 @@
 		)
 		(pin "58"
 			(uuid "bce5ec4a-4138-41c8-bf3f-e4d679a554df")
+			(alternate "QUADSPI_BK1_IO0")
 		)
 		(pin "75"
 			(uuid "41589506-bd5f-4604-ad08-0152815df019")
@@ -31023,6 +31046,7 @@
 		)
 		(pin "92"
 			(uuid "c00ace46-30f6-4276-a884-d2b2731ed28f")
+			(alternate "QUADSPI_BK1_NCS")
 		)
 		(pin "90"
 			(uuid "4c3ebe60-f786-4b91-bbcc-21df22f0a76a")
@@ -31034,6 +31058,7 @@
 		)
 		(pin "78"
 			(uuid "6b017e93-2b39-48f6-99dc-2e506c52942c")
+			(alternate "QUADSPI_BK1_IO1")
 		)
 		(pin "79"
 			(uuid "86b7fa70-9aed-4fb1-935a-c61a93e88a6b")
@@ -31090,7 +31115,6 @@
 		)
 		(pin "93"
 			(uuid "09876f38-ed06-4c3d-8727-557ca5a0c8a6")
-			(alternate "I2C1_SDA")
 		)
 		(pin "94"
 			(uuid "47edbe4e-ee89-4218-85a9-7b9a559d0011")
@@ -31134,6 +31158,7 @@
 		)
 		(pin "66"
 			(uuid "16b42ae5-3805-4f5f-8496-f2cd12e725ce")
+			(alternate "QUADSPI_BK1_IO0")
 		)
 		(pin "67"
 			(uuid "2a7a08c1-e8d6-4bd0-bbf8-4f05304f6204")

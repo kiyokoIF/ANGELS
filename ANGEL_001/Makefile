@@ -3,8 +3,8 @@ TARGET = ANGEL_001
 
 # Sources
 CPP_SOURCES = ANGEL_001.cpp
-CPP_SOURCES += periph/msa311.cpp
-CPP_SOURCES += periph/cap1188.cpp
+CPP_SOURCES += per/mxc6655.cpp
+CPP_SOURCES += per/cap1203.cpp
 
 # Load program into SRAM instead of Flash (can also be QSPI)
 APP_TYPE = BOOT_NONE

@@ -2436,6 +2436,12 @@
 		(path "/30230324-9263-4f6c-8dba-e2be148a1646")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -5944,6 +5950,12 @@
 		(path "/cdbbca9e-51bf-4c4a-ab24-52edbf7fdc32")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -6102,6 +6114,12 @@
 		(path "/a6b54675-1e4b-4929-a0f3-9bc9b0954a7e")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -6276,6 +6294,12 @@
 		(path "/53f34381-c789-4e23-93ba-29b250695a89")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -6485,6 +6509,12 @@
 		(path "/8ffaf0bf-2fb4-475b-9ed7-2b5df6cc8f7e")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -6634,6 +6664,12 @@
 		(path "/6d03f192-0865-48b9-af4d-3562ade6d29c")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -6751,6 +6787,12 @@
 		(path "/ba36a74d-aa08-4878-aa3d-695f3bf648f0")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -6900,6 +6942,12 @@
 		(path "/33e4b3ed-7614-47ae-833f-1f4c13f52ab0")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "SH" "5" "1" "3" "2" "4")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -7404,6 +7452,12 @@
 		(path "/11ad158c-b84a-4b42-93f3-bbd6378a9e7c")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -7521,6 +7575,12 @@
 		(path "/925d166d-d110-4300-9962-02175f3b669c")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -7670,6 +7730,12 @@
 		(path "/a76eaa5e-4b03-47e8-823b-5baaf7dcdfdf")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "S" "R" "T" "TN")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -8074,6 +8140,12 @@
 		(path "/06449309-230c-4605-806c-3db840a65240")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -8225,6 +8297,12 @@
 		(path "/64442843-cc61-44e8-8b7b-9e8d0db1819d")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -8342,6 +8420,12 @@
 		(path "/15068967-1858-46e1-a2b6-8578719697ad")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -8500,6 +8584,12 @@
 		(path "/122a6042-c66c-4223-bb58-8fd7adff7130")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -8658,6 +8748,12 @@
 		(path "/c086feb2-43b3-4e1a-ab04-f59a2bb19cc4")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -8816,6 +8912,12 @@
 		(path "/5069ad2a-1d50-4996-922d-0eb9c2d3c290")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -8976,6 +9078,12 @@
 		(path "/210749dc-ba62-49b5-9c6c-75265334a7e4")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -9134,6 +9242,12 @@
 		(path "/b6165601-718d-4915-883f-c030d87d571b")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -9292,6 +9406,12 @@
 		(path "/7102a9bf-46a9-478c-bd2e-442ee5492ea5")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -9450,6 +9570,12 @@
 		(path "/05308d0a-5c7a-4556-b803-2b52268a93e3")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -9608,6 +9734,12 @@
 		(path "/067ab7e6-6300-4054-bd8b-94ba3911a84a")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "3" "5" "2" "6" "4")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -9970,6 +10102,12 @@
 		(path "/0b7e692b-f6d1-4889-af61-a24e6e05c178")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -10128,6 +10266,12 @@
 		(path "/d7d754da-603b-47e6-bc2c-47e52aae2d12")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -10286,6 +10430,12 @@
 		(path "/06925830-8653-4a81-9e64-87fd661d452d")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -10444,6 +10594,12 @@
 		(path "/ca3e217e-0d8b-4d08-9bc2-30da51f090c8")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -10602,6 +10758,12 @@
 		(path "/4f3fd6d5-7ee4-4b3f-ae8c-8a90bf5d6559")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "3" "2" "5" "4")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -11018,6 +11180,12 @@
 		(path "/94570ffd-1acf-449c-86b4-9f6da875e9f1")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -11227,6 +11395,12 @@
 		(path "/7b921ba2-f9ff-4757-b772-87c5e66f8bfb")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -11389,6 +11563,12 @@
 		(path "/03c35083-e902-4507-9cc4-c010bf61b93c")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "8" "4" "1" "6" "5" "2" "3" "7")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -11769,6 +11949,12 @@
 		(path "/d50bd64d-326a-4606-b51b-395accd3f771")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -12083,6 +12269,12 @@
 		(path "/7ac394b5-0019-4e5c-94b6-27c12b85d72d")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "3" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -12392,6 +12584,12 @@
 		(path "/52ccee12-0928-4f8a-b2d3-9770e17c5129")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -12509,6 +12707,12 @@
 		(path "/f80dbcc3-3c30-4fd4-aa45-e97827f88e3a")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -12667,6 +12871,12 @@
 		(path "/37047663-e189-413a-88a3-77662f463845")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -12825,6 +13035,12 @@
 		(path "/f300473f-800c-4f4c-bf7c-6386c4effab9")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -12984,6 +13200,12 @@
 		(path "/eb59de4d-5e02-4253-905b-f1f7a3601a0d")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -13258,6 +13480,12 @@
 		(path "/0d9bb06b-ee08-4a21-a7de-f05a9af22280")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "3" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -13576,6 +13804,12 @@
 		(path "/542c69d8-92bb-46dc-86ef-1753ffb161c2")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -13734,6 +13968,12 @@
 		(path "/ca5869e5-3050-4931-8eb6-24565016ffa0")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -13892,6 +14132,12 @@
 		(path "/9af15d57-38af-429b-8916-3c37648e310c")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -14050,6 +14296,12 @@
 		(path "/8c7a9a6a-f7a6-45aa-9646-01389033b032")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -14208,6 +14460,12 @@
 		(path "/9fb5e7a5-4ff6-494d-97a1-f1e69bf55928")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -14366,6 +14624,12 @@
 		(path "/8b0a2f77-fc84-4443-92ca-9489b7e18706")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -14524,6 +14788,12 @@
 		(path "/0795e0b6-4ae8-4ef4-9194-3c252e4b9e81")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "4" "1" "6" "7" "2" "5" "8")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -14906,6 +15176,12 @@
 		(path "/976274f8-81a6-48a4-93f1-9b3a797c6ace")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -15064,6 +15340,12 @@
 		(path "/628f0d9c-e8e1-453a-81ef-67ddf2826555")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -15222,6 +15504,14 @@
 		(path "/f98e3312-8c80-4ee1-8bf5-cf3362937b37")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2" "27" "15" "28" "25" "26" "4" "5" "6" "12" "11" "10" "9"
+					"8" "7" "16" "24" "23" "22" "20" "19" "18" "17" "14" "13" "3" "21"
+				)
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -15804,6 +16094,12 @@
 		(path "/3fad83f0-3ef8-49a9-a6d2-ef642b255528")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -17591,6 +17887,12 @@
 		(path "/be3db152-061b-433a-9572-8de1c5019a2e")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "3" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -17942,6 +18244,12 @@
 		(path "/e4913fbc-33b2-4a46-b1af-ae8d9c75acb4")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "3" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -18260,6 +18568,12 @@
 		(path "/90278ecc-e67a-42c1-98a5-868535e4c6e8")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -18409,6 +18723,12 @@
 		(path "/6d22931e-4147-4358-aeee-e33a7a1525f8")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -18526,6 +18846,12 @@
 		(path "/450b1baf-a1b0-4266-86de-cde087b54f78")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -18717,6 +19043,12 @@
 		(path "/49b8f3f8-e6e9-41af-b930-22129be470b3")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "3" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -19035,6 +19367,12 @@
 		(path "/7f8c5208-1211-40ce-8441-7d07ff67ec32")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "3" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -19417,6 +19755,12 @@
 		(path "/d18dcbc3-1263-4fb0-849e-654be01a0ed5")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -19566,6 +19910,12 @@
 		(path "/c25c6397-2c81-48fa-baca-83f968697454")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -19683,6 +20033,12 @@
 		(path "/82022600-972c-49b6-8faa-0b10258b5577")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -19833,6 +20189,12 @@
 		(path "/b4d7ee9f-233d-457b-906b-721d32567a77")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "12" "7" "9" "5" "1" "3" "4" "6" "8" "10" "11")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -20261,6 +20623,20 @@
 		(path "/e78d4df1-b137-4eb7-9c1c-281adf5f3cc6")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "14" "94" "20" "12" "13" "97" "98" "1" "2" "3" "4" "5" "37" "38"
+					"39" "40" "41" "42" "43" "44" "45" "81" "82" "83" "84" "85" "86" "87"
+					"88" "55" "56" "57" "58" "59" "60" "61" "62" "48" "73" "6" "11" "27"
+					"50" "74" "10" "99" "49" "26" "75" "19" "100" "21" "22" "23" "24" "25"
+					"28" "29" "30" "31" "67" "68" "69" "70" "71" "72" "76" "77" "34" "35"
+					"36" "89" "90" "91" "92" "93" "95" "96" "46" "47" "51" "52" "53" "54"
+					"15" "16" "17" "18" "32" "33" "63" "64" "65" "66" "78" "79" "80" "7"
+					"8" "9"
+				)
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -21504,8 +21880,8 @@
 			(size 0.3 1.6)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.25)
-			(net "unconnected-(U2-PB7-Pad93)")
-			(pinfunction "I2C1_SDA_93")
+			(net "/BOOT")
+			(pinfunction "PB7_93")
 			(pintype "bidirectional")
 			(uuid "0c13a640-8606-4e22-87df-3ecd1f214979")
 		)
@@ -21663,6 +22039,12 @@
 		(path "/6372cd58-5d19-4ce2-aacf-2a41576692ae")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -21821,6 +22203,12 @@
 		(path "/f01e8b03-2c92-43c8-9b42-48adba93f125")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -21981,6 +22369,12 @@
 		(path "/3687b41e-2cfd-43ef-af78-1dc9da53936b")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -22172,6 +22566,12 @@
 		(path "/3012ae9c-3e1f-4afe-983a-a968cf470ab4")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "3" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -22490,6 +22890,12 @@
 		(path "/e2abc442-e68b-42f8-aba1-18ed25650a58")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -22648,6 +23054,12 @@
 		(path "/6000de14-ddda-4ab9-971b-511a44ad41da")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -22806,6 +23218,12 @@
 		(path "/3d4bed19-bcbe-4d7f-98be-dc84f8ae92f6")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -22964,6 +23382,12 @@
 		(path "/b1e4b6d2-e204-4992-a41b-3eb3fdfaa804")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -23122,6 +23546,12 @@
 		(path "/9d175a50-6196-4a52-bb9c-43de66757917")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -23280,6 +23710,12 @@
 		(path "/db6f1071-bb95-4c8e-9620-57909d466969")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -23438,6 +23874,12 @@
 		(path "/2014076b-afb4-469c-95e9-8b49a6601d10")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -23589,6 +24031,12 @@
 		(path "/3a5214c0-60ee-4152-8cb7-2b56ee2c5bac")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "8" "9" "1" "4" "7" "6" "5")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -23943,6 +24391,12 @@
 		(path "/c73ec5ca-829b-4d41-980b-26c1e3309545")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -24101,6 +24555,12 @@
 		(path "/8802e20a-1a08-4eb9-8516-b6e1cea1aa0b")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -24278,6 +24738,12 @@
 		(path "/a340c33f-a9ad-4fcd-af22-640ebd8695b7")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -24576,6 +25042,12 @@
 		(path "/75a5bf66-b6a4-4a99-9660-b0444bc96ece")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -24734,6 +25206,12 @@
 		(path "/dbc23d1c-5ee3-46b6-9a96-d95e2e6b95f9")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "3" "5" "7" "9" "11" "2" "4" "6" "8" "10" "12")
+			)
+		)
 		(attr through_hole exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -25105,6 +25583,12 @@
 		(path "/caa294f4-77b6-4e74-a63f-99cf48521fad")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -25263,6 +25747,12 @@
 		(path "/4e205395-1ebb-4be8-bc30-338f24ae3df5")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -25421,6 +25911,12 @@
 		(path "/e8eb522d-5bc5-4304-ab23-14278b5f89cb")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2" "4" "3")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -25602,6 +26098,12 @@
 		(path "/0ad64f1a-9a4f-4713-b796-0ef050196d4c")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -25764,6 +26266,12 @@
 		(path "/b773aa6e-214c-419a-8b84-8596974e998e")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "5" "1" "2" "3" "8" "7" "6")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -26080,6 +26588,12 @@
 		(path "/2579cbeb-d5fd-43c2-9e44-eb848d5ba912")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -26238,6 +26752,12 @@
 		(path "/5239cfa5-1ac3-40e5-8cc6-865517691c7d")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -26387,6 +26907,12 @@
 		(path "/39765ffb-fa58-4c4b-a88a-997b85423387")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -26668,6 +27194,12 @@
 		(path "/d1875350-3c37-45d7-a45c-37aa0e52dcbf")
 		(sheetname "/")
 		(sheetfile "001_PCB.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line

@@ -4,3 +4,6 @@
 [submodule "DaisySP"]
 	path = DaisySP
 	url = https://github.com/electro-smith/DaisySP
+[submodule "DaisyBootloader"]
+	path = DaisyBootloader
+	url = https://github.com/daisyaudio/DaisyBootloader
